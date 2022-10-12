@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<title>home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/17907e3764.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
+<style>
+</style>
+<body>
+<div id="container">
+
+<div id="header">
+	<div class="header_right"><img src="../images/Yurinpanda.png" alt="icon" style="width:50px; height: 50px;"></div>
+        <a href="Home.html" title="home">
+            <i class='fas fa-home' style='font-size:30px'></i>
+        </a>
+	<div class="header_right"><h2 >我的網頁</h2></div>
+        <form class="header_form">
+            <input id="search" type="text" name="Search" placeholder="Search..">
+        </form>
+</div>
+
+<div id="nav">
+    <ul class="clearfix">
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="menu dropbtn" tltle="menu" style="height: 46.4px;"><i class="fa-solid fa-bars"></i></a>
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" title="" id="dropdown_btn1">(一)</a>
+                <a href="javascript:void(0)" title="" id="dropdown_btn2">(二)</a>
+                <a href="javascript:void(0)" title="" id="dropdown_btn3">(三)</a>
+                <a href="javascript:void(0)" title="" id="dropdown_btn4">(四)</a>
+            </div>
+        </li>
+        <li><a class="" href="Aboutme.html" title="">關於我</a></li>
+        <li><a href="Activity.html" title="">活動錦集</a></li>
+        <li class=""><a href="" title="Page3">頁面3</a></li>
+        <li style="float:right; height: auto;">
+            <a href="#header" title="回到頂端" style="height: 26.4px; width: 60px;">
+                <i class='far fa-arrow-alt-circle-up' style='font-size:30px'></i>
+            </a>
+        </li>
+    </ul>
+	
+</div >
+
+<div class="clearfix" id="main">
+	<div id="content">
+            <h2>首頁</h2>
+            <div class="content_photo">
+                <img class="photo" src="../images/Myphoto5.jpg" alt="大學朋友">
+            </div>
+            <br><br>
+            <div class="content_photo">
+                <img class="photo" src="../images/Myphoto21.jpg" alt="排球比賽">
+            </div>
+            <p style="text-align: center;">
+                歡迎來到我的網站，這裡紀錄著我的事情<br>
+            </p>
+	</div>
+    
+</div>
+
+
+<div id="footer">
+	版權 © ChiJay1029.com
+</div>
+
+
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+<!--大圖model-->
+
+<script>
+    $(document).ready(function(){
+        $(".photo").click(function(){
+            $("#myModal").show();
+            $("#img01").attr("src", this.src);
+            $("#caption").text(this.alt);
+        });
+        $(".close").click(function(){
+            $("#myModal").hide();
+        });
+    });
+</script>
+<!-- 點擊相片大圖投放 -->
+<!--  
+<script>
+    $(document).ready(function(){
+      $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#content").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+</script>
+-->
+<!-- 過濾器,不分大小寫-->
+
+<!-- 
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.querySelector('.photo');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+</script>
+ -->
+<!--function-->
+
+</body>
+</head>
+</html>
